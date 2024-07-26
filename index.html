@@ -1,57 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Part 16 CSS Selector!!</h1>
-    <h2>Font stacks, default spacing and more</h2>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="javascript:void(0)"><img src="img/img_avatar1.png" alt="Avatar Logo" style="width:40px;"
+            class="rounded-pill"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">Link</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
 
+    <!-- Carousel -->
+<div id="demo" class="carousel slide tab-nav" data-bs-ride="carousel">
+  
 
-    <p class="intro">Once there was a royal couple who grieved excessively because they had no children. When at last,
-        after long
-        waiting, the queen <a href="https://www.google.com">husband</a> with a little daughter, his majesty showed his
-        joy by giving a
-        christening feast, so grand that the like of it was never known. He invited all the fairies in the land—there
-        were seven altogether—to stand godmothers to the </p>
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
 
-    <div class="body-text">
-        <p>Once there was a royal couple who grieved excessively because they had no children. When at last, after long
-            waiting, the queen <a href="#">presented</a> her husband with a little daughter, his majesty showed his joy
-            by giving a
-            christening feast, so grand that the like of it was never known. He invited all the fairies in the
-            land—there
-            were seven altogether—to stand godmothers to the </p>
-        <p><q> <a href="#" class="important-link"> was a royal couple who grieved</a> excessively because they had no
-                children. When at last, after long
-                waiting, the queen presented her husband with a little daughter, his majesty showed his joy by giving a
-                christening feast, so grand that the like of it was never known. He invited all the fairies in the
-                land—there
-                were seven altogether—to stand godmothers to the</q> </p>
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/la.jpg" alt="Los Angeles" class="d-block w-100">
     </div>
-    <!--Link Pages-->
-    <div class="navbar">
-        <p><a href="index.html" class="linkpages">home</a></p>
-        <p><a href="pagetwo.html" class="linkpages">pagetwo</a></p>
-        <p><a href="htmllist.html" class="linkpages">htmllist</a></p>
+    <div class="carousel-item">
+      <img src="img/chicago.jpg" alt="Chicago" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="img/ny.jpg" alt="New York" class="d-block w-100">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+    <div class="container-fluid tab-nav">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#menu1">Menu 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#menu2">Menu 2</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane container-fluid active" id="home">
+          <p>HOME</p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </div>
+        <div class="tab-pane container-fluid fade" id="menu1">
+          <p>Menu 1</p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div class="tab-pane container-fluid fade" id="menu2">
+          <p>Menu 2</p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam.
+        </div>
+      </div>
     </div>
 
+  </div>
 
 </body>
 
 </html>
-<!--do not use <b> and <i>-->
-
-<!--document web : https://www.codequickref.com/-->
-
-<!--<strong> and <em> make a text Bold and italic-->
-<!--https://www.w3schools.com/colors/colors_picker.asp (web color)-->
-<!--https://www.cssfontstack.com/ (fontweb)-->
-
-<!-- icon website
-https://fonts.google.com/icons?selected=Material+Symbols+Outlined:star:FILL@0;wght@400;GRAD@0;opsz@20&icon.size=16&icon.color=%234e476a -->
